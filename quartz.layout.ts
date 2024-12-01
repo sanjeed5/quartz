@@ -7,6 +7,21 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Graph(),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'sanjeed5/quartz',
+        // from data-repo-id
+        repoId: 'R_kgDONV2uFg',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDONV2uFs4CkyRk',
+        // Additional properties
+        reactionsEnabled: true,
+      }
+    }),
   ],
   footer: Component.Footer({
     links: {
