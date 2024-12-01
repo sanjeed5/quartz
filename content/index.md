@@ -7,6 +7,13 @@ draft: false
 ---
 I'm Sanjeed. This is my little hypertext garden on the internet - make yourself at home!
 
+```
+° ˛ ° ˚* _Π_____*☽*˚ ˛
+✩ ˚˛˚*/______/__＼。✩˚ ˚˛
+˚ ˛˚˛˚｜ 田田｜門｜ ˚ ˚.            ( ⸝⸝•ᴗ•⸝⸝ )੭⁾⁾ 
+´´ ̛ ̛ ´´ ´´ ´´ ̛ ̛ ´´ ´´ ´´ ̛ ̛ ´´ ´´ ´´ ̛ ̛ ´´ ´´ ´´ ̛ ̛ ´´ ´´  
+```
+
 ### ✨ me in 30 seconds
 
 - semi-technical generalist. loves to build - [DM](https://x.com/sanjeed_i) if you'd like to build something together
@@ -25,6 +32,7 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 - [[AI Podcast - idea to launch in 30 minutes]]
 - [[Lilly - Whatsapp AI Chatbot]]
 - [[Resonect - startup]]
+- [[How to publish your Obsidian notes for free using Quartz|This site]]
 
 ### 💼 work
 
@@ -41,4 +49,3 @@ See [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US)
 - Always up to chat - DM on [Twitter](https://twitter.com/sanjeed_i).
 - This is me on: [Github](https://github.com/sanjeed5), [Opensea](https://opensea.io/0x049A5400C927db4eE282BA899b556B075eBf8364), [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US), [Facebook](https://www.youtube.com/watch?v=xvFZjo5PgG0) (don’t check out the facebook link 🤝).
 - I sing sometimes: [Instagram](https://www.instagram.com/sanjeed.i/)
-- I've built this site using [Quartz](https://quartz.jzhao.xyz/) - amazing open source project. 
