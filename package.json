@@ -22,7 +22,7 @@
     "copy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/",
     "sync": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz sync",
     "build": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build",
-    "deploy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build && wrangler pages deploy public"
+    "deploy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build && wrangler pages deploy public && open https://sanjeed.in/"
   },
   "engines": {
     "npm": ">=9.3.1",
