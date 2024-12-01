@@ -1,3 +1,7 @@
+# sanjeed.in
+
+Cloudflare dash link - https://dash.cloudflare.com/db9332254eb777142cdbf3e023f1ae1b/pages/view/quartz
+
 # Quartz v4
 
 > “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
