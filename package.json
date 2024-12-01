@@ -21,7 +21,7 @@
     "dev": "npx quartz build --serve --directory ../jarvis-obsidianvault/public/",
     "sync": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz sync",
     "build": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build",
-    "deploy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build"
+    "deploy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build && wrangler pages deploy public"
   },
   "engines": {
     "npm": ">=9.3.1",
