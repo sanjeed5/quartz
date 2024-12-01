@@ -18,8 +18,9 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "dev": "npx quartz build --serve",
-    "sync": "npx quartz sync"
+    "dev": "npx quartz build --serve --directory ../jarvis-obsidianvault/public",
+    "sync": "npx quartz sync --directory ../jarvis-obsidianvault/public",
+    "build": "npx quartz build --directory ../jarvis-obsidianvault/public"
   },
   "engines": {
     "npm": ">=9.3.1",
