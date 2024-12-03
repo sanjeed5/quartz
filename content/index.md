@@ -34,6 +34,10 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 - [[Resonect - startup]]
 - [[How to publish your Obsidian notes for free using Quartz|This site]]
 
+### 📝 notes
+
+See [Notes](https://sanjeed.in/notes/)
+
 ### 💼 work
 
 See [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US)

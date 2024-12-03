@@ -1,5 +1,5 @@
 ---
-title: What to do with your old laptops
+title: What to do with your old slow laptops
 tags:
   - linux
 created: 2024-11-29  04:28
@@ -20,5 +20,8 @@ So I did some research to find linux distros which work well on low end systems,
 Went ahead with Linux Mint due to larger community and support. 
 So far, it's been a great experience. The speed up is just amazing!
 
+If note, recycle it. If you don't need the laptop, install Linux Mint and give it to someone else who can use it. 
+
 Unrelated note: I also setup [[Using Anki to memorize facts|Anki]] for her which she's been loving. 
 
+You can also use this laptop as a home server, that project is sitting in my "someday" list for now. 
