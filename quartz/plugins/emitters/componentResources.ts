@@ -77,90 +77,97 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.css.push(popoverStyle)
   }
 
-  if (cfg.analytics?.provider === "google") {
-    const tagId = cfg.analytics.tagId
-    componentResources.afterDOMLoaded.push(`
-      const gtagScript = document.createElement("script")
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=${tagId}"
-      gtagScript.async = true
-      document.head.appendChild(gtagScript)
+  // Handle multiple analytics providers
+  const analytics = Array.isArray(cfg.analytics) ? cfg.analytics : cfg.analytics ? [cfg.analytics] : []
+  
+  for (const provider of analytics) {
+    if (!provider) continue
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "${tagId}", { send_page_view: false });
+    if (provider.provider === "google") {
+      const tagId = provider.tagId
+      componentResources.afterDOMLoaded.push(`
+        const gtagScript = document.createElement("script")
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=${tagId}"
+        gtagScript.async = true
+        document.head.appendChild(gtagScript)
 
-      document.addEventListener("nav", () => {
-        gtag("event", "page_view", {
-          page_title: document.title,
-          page_location: location.href,
-        });
-      });`)
-  } else if (cfg.analytics?.provider === "plausible") {
-    const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
-    componentResources.afterDOMLoaded.push(`
-      const plausibleScript = document.createElement("script")
-      plausibleScript.src = "${plausibleHost}/js/script.manual.js"
-      plausibleScript.setAttribute("data-domain", location.hostname)
-      plausibleScript.defer = true
-      document.head.appendChild(plausibleScript)
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "${tagId}", { send_page_view: false });
 
-      window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+        document.addEventListener("nav", () => {
+          gtag("event", "page_view", {
+            page_title: document.title,
+            page_location: location.href,
+          });
+        });`)
+    } else if (provider.provider === "plausible") {
+      const plausibleHost = provider.host ?? "https://plausible.io"
+      componentResources.afterDOMLoaded.push(`
+        const plausibleScript = document.createElement("script")
+        plausibleScript.src = "${plausibleHost}/js/script.manual.js"
+        plausibleScript.setAttribute("data-domain", location.hostname)
+        plausibleScript.defer = true
+        document.head.appendChild(plausibleScript)
 
-      document.addEventListener("nav", () => {
-        plausible("pageview")
-      })
-    `)
-  } else if (cfg.analytics?.provider === "umami") {
-    componentResources.afterDOMLoaded.push(`
-      const umamiScript = document.createElement("script")
-      umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js"
-      umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}")
-      umamiScript.async = true
+        window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
 
-      document.head.appendChild(umamiScript)
-    `)
-  } else if (cfg.analytics?.provider === "goatcounter") {
-    componentResources.afterDOMLoaded.push(`
-      const goatcounterScript = document.createElement("script")
-      goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}"
-      goatcounterScript.async = true
-      goatcounterScript.setAttribute("data-goatcounter",
-        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count")
-      document.head.appendChild(goatcounterScript)
-    `)
-  } else if (cfg.analytics?.provider === "posthog") {
-    componentResources.afterDOMLoaded.push(`
-      const posthogScript = document.createElement("script")
-      posthogScript.innerHTML= \`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-      posthog.init('${cfg.analytics.apiKey}',{api_host:'${cfg.analytics.host ?? "https://app.posthog.com"}'})\`
-      document.head.appendChild(posthogScript)
-    `)
-  } else if (cfg.analytics?.provider === "tinylytics") {
-    const siteId = cfg.analytics.siteId
-    componentResources.afterDOMLoaded.push(`
-      const tinylyticsScript = document.createElement("script")
-      tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js"
-      tinylyticsScript.defer = true
-      document.head.appendChild(tinylyticsScript)
-    `)
-  } else if (cfg.analytics?.provider === "cabin") {
-    componentResources.afterDOMLoaded.push(`
-      const cabinScript = document.createElement("script")
-      cabinScript.src = "${cfg.analytics.host ?? "https://scripts.withcabin.com"}/hello.js"
-      cabinScript.defer = true
-      cabinScript.async = true
-      document.head.appendChild(cabinScript)
-    `)
-  } else if (cfg.analytics?.provider === "clarity") {
-    componentResources.afterDOMLoaded.push(`
-      const clarityScript = document.createElement("script")
-      clarityScript.innerHTML= \`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "${cfg.analytics.projectId}");\`
-      document.head.appendChild(clarityScript)
-    `)
+        document.addEventListener("nav", () => {
+          plausible("pageview")
+        })
+      `)
+    } else if (provider.provider === "umami") {
+      componentResources.afterDOMLoaded.push(`
+        const umamiScript = document.createElement("script")
+        umamiScript.src = "${provider.host ?? "https://analytics.umami.is"}/script.js"
+        umamiScript.setAttribute("data-website-id", "${provider.websiteId}")
+        umamiScript.async = true
+
+        document.head.appendChild(umamiScript)
+      `)
+    } else if (provider.provider === "goatcounter") {
+      componentResources.afterDOMLoaded.push(`
+        const goatcounterScript = document.createElement("script")
+        goatcounterScript.src = "${provider.scriptSrc ?? "https://gc.zgo.at/count.js"}"
+        goatcounterScript.async = true
+        goatcounterScript.setAttribute("data-goatcounter",
+          "https://${provider.websiteId}.${provider.host ?? "goatcounter.com"}/count")
+        document.head.appendChild(goatcounterScript)
+      `)
+    } else if (provider.provider === "posthog") {
+      componentResources.afterDOMLoaded.push(`
+        const posthogScript = document.createElement("script")
+        posthogScript.innerHTML= \`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('${provider.apiKey}',{api_host:'${provider.host ?? "https://app.posthog.com"}'})\`
+        document.head.appendChild(posthogScript)
+      `)
+    } else if (provider.provider === "tinylytics") {
+      const siteId = provider.siteId
+      componentResources.afterDOMLoaded.push(`
+        const tinylyticsScript = document.createElement("script")
+        tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js"
+        tinylyticsScript.defer = true
+        document.head.appendChild(tinylyticsScript)
+      `)
+    } else if (provider.provider === "cabin") {
+      componentResources.afterDOMLoaded.push(`
+        const cabinScript = document.createElement("script")
+        cabinScript.src = "${provider.host ?? "https://scripts.withcabin.com"}/hello.js"
+        cabinScript.defer = true
+        cabinScript.async = true
+        document.head.appendChild(cabinScript)
+      `)
+    } else if (provider.provider === "clarity") {
+      componentResources.afterDOMLoaded.push(`
+        const clarityScript = document.createElement("script")
+        clarityScript.innerHTML= \`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "${provider.projectId}")\`
+        document.head.appendChild(clarityScript)
+      `)
+    }
   }
 
   if (cfg.enableSPA) {
