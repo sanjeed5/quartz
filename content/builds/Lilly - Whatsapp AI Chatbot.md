@@ -1,5 +1,4 @@
 ---
-title: Lilly - Whatsapp AI Chatbot
 tags:
   - "#builds"
   - "#llm"

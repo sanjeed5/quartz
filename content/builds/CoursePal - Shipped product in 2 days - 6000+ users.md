@@ -1,5 +1,4 @@
 ---
-title: CoursePal - Shipped product in 2 days - 6000+ users
 tags:
   - "#builds"
 created: 2024-12-01  20:47

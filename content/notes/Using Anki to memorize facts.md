@@ -1,5 +1,4 @@
 ---
-title: Using Anki to memorize facts
 tags:
   - "#memory"
   - notes

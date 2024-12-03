@@ -1,5 +1,4 @@
 ---
-title: How to publish your Obsidian notes for free using Quartz
 tags:
   - "#webdevelopment"
   - notes

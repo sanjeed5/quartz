@@ -1,5 +1,4 @@
 ---
-title: Tools I use
 tags:
   - notes
 created: 2024-12-03  23:40

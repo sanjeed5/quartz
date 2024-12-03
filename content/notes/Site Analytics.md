@@ -6,6 +6,6 @@ draft: false
 ---
 Also viewable at [stats.sanjeed.in](https://stats.sanjeed.in)
 
-<iframe src="https://sanjeed.goatcounter.com?hideui=1"></iframe>
+<iframe width="100%" src="https://sanjeed.goatcounter.com?hideui=1"></iframe>
 
 

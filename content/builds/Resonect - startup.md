@@ -1,5 +1,4 @@
 ---
-title: Resonect - startup
 tags:
   - "#builds"
 created: 2024-12-01  20:49

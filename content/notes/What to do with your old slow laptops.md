@@ -1,5 +1,4 @@
 ---
-title: What to do with your old slow laptops
 tags:
   - linux
   - notes
