@@ -26,7 +26,7 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 - i [sing](https://www.instagram.com/sanjeed.i/) sometimes. i've performed with 10 musical instruments so far.
 - i love food, I [will fly for food](https://www.willflyforfood.net/). 
 
-### 🛠️ #builds
+### 🛠️ builds
 
 - [[CoursePal - Shipped product in 2 days - 6000+ users]]
 - [[AI Podcast - idea to launch in 30 minutes]]
@@ -34,19 +34,15 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 - [[Resonect - startup]]
 - [[How to publish your Obsidian notes for free using Quartz|This site]]
 
-### 📝 notes
+See all here: [builds](./tags/builds) 
 
-See #notes 
+### 📝 posts
+
+See [notes](./tags/notes), [TIL](./tags/TIL)
 
 ### 💼 work
 
 See [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US)
-
-### 🔧 projects - built to learn
-- [OnePiece DAO - Built a DAO](<https://github.com/sanjeed5/OnePieceDAO>)
-- [Epic NFTs - Mint NFTs](https://github.com/sanjeed5/epic-nfts)
-- [Wave Portal - Message on blockchain](https://github.com/sanjeed5/waveportal-starter-frontend)
-
 
 ### 🤙 Contact & Socials
 

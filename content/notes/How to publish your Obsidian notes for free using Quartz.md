@@ -61,3 +61,13 @@ Emoji on home page from here: https://emojicombos.com/ . Another example below:
 If you don't know, this is from a fun anime called Spy x Family. 
 
 
+---
+
+# Random quartz tidbits
+
+### Link to tags using relative path
+
+if you a have a tag `#exampletag` you can use `[linktext](./tags/exampletag)` to make use of the tags url that quartz builds. 
+
+Directly using the tags makes the page think that the tag applies to your page which might not be intended. 
+E.g. using `#music` tag on my homepage doesn't mean my homepage is a music page. It also makes the tags appear at the top of the home page. 
