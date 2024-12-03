@@ -127,13 +127,16 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
         document.head.appendChild(umamiScript)
       `)
     } else if (provider.provider === "goatcounter") {
+      console.log("[Debug] Adding GoatCounter analytics script");
       componentResources.afterDOMLoaded.push(`
+        console.log("[Debug] Initializing GoatCounter script");
         const goatcounterScript = document.createElement("script")
         goatcounterScript.src = "${provider.scriptSrc ?? "https://gc.zgo.at/count.js"}"
         goatcounterScript.async = true
         goatcounterScript.setAttribute("data-goatcounter",
           "https://${provider.websiteId}.${provider.host ?? "goatcounter.com"}/count")
         document.head.appendChild(goatcounterScript)
+        console.log("[Debug] GoatCounter script added to head");
       `)
     } else if (provider.provider === "posthog") {
       componentResources.afterDOMLoaded.push(`
