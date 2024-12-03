@@ -5,7 +5,7 @@ tags:
 created: 2024-12-04  02:39
 draft: false
 ---
-# the rabbithole
+## the rabbithole
 
 1. i searched for how to do [[shortcut to directories in zsh|directory shortcuts on zsh]] - [on perplexity of course](https://www.perplexity.ai/search/shortcut-to-a-directory-in-zsh-zgn7I8NjRCylPa3l4W8nvA#0)
 2. found this [blog](https://til.hashrocket.com/posts/xsavbhlrz4-shortcuts-with-hash-d-in-zsh) as the source
