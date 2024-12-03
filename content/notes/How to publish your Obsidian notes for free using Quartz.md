@@ -2,6 +2,7 @@
 title: How to publish your Obsidian notes for free using Quartz
 tags:
   - "#webdevelopment"
+  - notes
 created: 2024-12-01  23:41
 modified: 2024-12-01  23:41
 draft: false

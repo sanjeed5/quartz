@@ -8,6 +8,8 @@ draft: true
 
 - [ ] add a random page button
 - [ ] add a nownownow page
+- [ ] Add visitor count total and on each page - https://sanjeed.goatcounter.com/help/visitor-counter
+- [ ] 
 
 # All Tasks from Blog
 ```dataview
@@ -28,7 +30,7 @@ SORT file.cday asc
 TABLE file.mday, file.cday, file.tags
 FROM "public"
 WHERE !draft
-SORT file.mday desc
+SORT file.mtime desc
 ```
 
 

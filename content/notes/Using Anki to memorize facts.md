@@ -2,6 +2,7 @@
 title: Using Anki to memorize facts
 tags:
   - "#memory"
+  - notes
 created: 2024-12-02  22:20
 modified: 2024-12-03  00:16
 draft: false

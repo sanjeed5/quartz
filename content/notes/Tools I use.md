@@ -1,6 +1,7 @@
 ---
 title: Tools I use
-tags: 
+tags:
+  - notes
 created: 2024-12-03  23:40
 modified: 2024-12-03  23:40
 draft: true

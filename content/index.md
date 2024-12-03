@@ -26,7 +26,7 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 - i [sing](https://www.instagram.com/sanjeed.i/) sometimes. i've performed with 10 musical instruments so far.
 - i love food, I [will fly for food](https://www.willflyforfood.net/). 
 
-### 🛠️ builds
+### 🛠️ #builds
 
 - [[CoursePal - Shipped product in 2 days - 6000+ users]]
 - [[AI Podcast - idea to launch in 30 minutes]]
@@ -36,7 +36,7 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 
 ### 📝 notes
 
-See [Notes](https://sanjeed.in/notes/)
+See #notes 
 
 ### 💼 work
 

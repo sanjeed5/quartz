@@ -2,6 +2,7 @@
 title: What to do with your old slow laptops
 tags:
   - linux
+  - notes
 created: 2024-11-29  04:28
 modified: 2024-11-29  04:28
 draft: false
