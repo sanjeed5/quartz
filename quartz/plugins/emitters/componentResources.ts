@@ -130,11 +130,37 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       console.log("[Debug] Adding GoatCounter analytics script");
       componentResources.afterDOMLoaded.push(`
         console.log("[Debug] Initializing GoatCounter script");
+        
+        // Create and load the GoatCounter script first
         const goatcounterScript = document.createElement("script")
         goatcounterScript.src = "${provider.scriptSrc ?? "https://gc.zgo.at/count.js"}"
         goatcounterScript.async = true
-        goatcounterScript.setAttribute("data-goatcounter",
+        goatcounterScript.setAttribute("data-goatcounter", 
           "https://${provider.websiteId}.${provider.host ?? "goatcounter.com"}/count")
+        
+        // Initialize settings before loading script
+        window.goatcounter = {
+          no_onload: true,
+          endpoint: "https://${provider.websiteId}.${provider.host ?? "goatcounter.com"}/count"
+        }
+        
+        // After script loads, set up navigation tracking
+        goatcounterScript.onload = function() {
+          console.log("[Debug] GoatCounter script loaded");
+          
+          // Initial page view
+          window.goatcounter.count({
+            path: location.pathname + location.search + location.hash
+          })
+          
+          // Track SPA navigation
+          document.addEventListener("nav", () => {
+            window.goatcounter.count({
+              path: location.pathname + location.search + location.hash
+            })
+          })
+        }
+        
         document.head.appendChild(goatcounterScript)
         console.log("[Debug] GoatCounter script added to head");
       `)
