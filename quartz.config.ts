@@ -12,11 +12,17 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
+    analytics: [{
       provider: "posthog",
       apiKey: "phc_qJxEI6GyeugJTjIibb1MSCecEiPaE4gYSkMUXk7nx04",
       host: "https://us.i.posthog.com", 
     },
+    {
+      provider: "goatcounter",
+      websiteId: "sanjeed",
+      host: "https://sanjeed.goatcounter.com",
+      scriptSrc: "//gc.zgo.at/count.js"
+    }],
     locale: "en-US",
     baseUrl: "sanjeed.in",
     ignorePatterns: ["private", "templates", ".obsidian"],
