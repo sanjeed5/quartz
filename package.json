@@ -18,7 +18,7 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "dev": "npx quartz build --serve --directory ../jarvis-obsidianvault/public/",
+    "dev": "npx quartz build --serve --directory ../jarvis-obsidianvault/public/ && open http://localhost:8080",
     "copy": "rsync -av --delete ../jarvis-obsidianvault/public/ content/",
     "sync": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz sync",
     "build": "rsync -av --delete ../jarvis-obsidianvault/public/ content/ && npx quartz build",
