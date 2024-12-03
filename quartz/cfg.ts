@@ -5,8 +5,7 @@ import { PluginTypes } from "./plugins/types"
 import { SocialImageOptions } from "./util/og"
 import { Theme } from "./util/theme"
 
-export type Analytics =
-  | null
+export type AnalyticsConfiguration =
   | {
       provider: "plausible"
       host?: string
@@ -43,6 +42,8 @@ export type Analytics =
       provider: "clarity"
       projectId?: string
     }
+
+export type Analytics = null | AnalyticsConfiguration | AnalyticsConfiguration[]
 
 export interface GlobalConfiguration {
   pageTitle: string
