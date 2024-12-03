@@ -21,7 +21,7 @@ const config: QuartzConfig = {
       provider: "goatcounter",
       websiteId: "sanjeed",
       host: "goatcounter.com",
-      scriptSrc: "//gc.zgo.at/count.js"
+      scriptSrc: "https://gc.zgo.at/count.js"
     }],
     locale: "en-US",
     baseUrl: "sanjeed.in",
