@@ -47,5 +47,5 @@ See [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US)
 ### 🤙 Contact & Socials
 
 - Always up to chat - DM on [Twitter](https://twitter.com/sanjeed_i).
-- This is me on: [Github](https://github.com/sanjeed5), [Opensea](https://opensea.io/0x049A5400C927db4eE282BA899b556B075eBf8364), [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US), [Facebook](https://www.youtube.com/watch?v=xvFZjo5PgG0) (don’t check out the facebook link 🤝).
+- This is me on: [Github](https://github.com/sanjeed5), [Opensea](https://opensea.io/sanjeed), [LinkedIn](https://www.linkedin.com/in/mohammed-sanjeed?_l=en_US), [Facebook](https://www.youtube.com/watch?v=xvFZjo5PgG0) (don’t check out the facebook link 🤝).
 - I sing sometimes: [Instagram](https://www.instagram.com/sanjeed.i/)

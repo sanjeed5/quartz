@@ -9,7 +9,8 @@ draft: true
 - [ ] add a random page button
 - [ ] add a nownownow page
 - [ ] Add visitor count total and on each page - https://sanjeed.goatcounter.com/help/visitor-counter
-- [ ] 
+- [ ] Add npx linkinator --recurse --silent http://localhost:8080
+
 
 # All Tasks from Blog
 ```dataview

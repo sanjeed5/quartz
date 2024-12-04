@@ -5,6 +5,7 @@ tags:
   - "#TIL"
 created: 2024-12-04  02:26
 draft: false
+title: How to add shortcut to directories in zsh
 ---
 `hash -d mydir=/path/to/long/path/annoyingly/long`
 

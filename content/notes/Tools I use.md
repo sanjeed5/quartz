@@ -24,5 +24,16 @@ draft: true
 * Cloudflare - for hosting - amazing free plan - tried and switched from Vercel/Netlify
 * Firebase - sometimes for serverless fucntions, easy storage and the free plan. 
 
+### Setup
+
+- oh-my-zsh in terminal
+
+### JS
+- pnpm > npm
+- biome > prettier
+
+### Python
+- uv > pip
+
 # Extensions
 - [ ] Add extensions
