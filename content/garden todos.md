@@ -8,6 +8,9 @@ draft: true
 
 - [ ] add a random page button
 - [ ] add a nownownow page
+- [ ] Add some webrings - 
+	- [ ] geekring like [here](https://localghost.dev/)https://geekring.net/
+	- [ ] More here: https://denmchenry.com/
 - [ ] Add visitor count total and on each page - https://sanjeed.goatcounter.com/help/visitor-counter
 - [ ] Add npx linkinator --recurse --silent http://localhost:8080
 

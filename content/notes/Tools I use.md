@@ -35,5 +35,12 @@ draft: true
 ### Python
 - uv > pip
 
+## Backend
+
+- https://koajs.com/ - better than expressjs apparently
+- https://feathersjs.com/ - interesting backend framework, haven't checked out yet. 
+
 # Extensions
 - [ ] Add extensions
+
+
