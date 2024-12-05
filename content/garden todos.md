@@ -28,7 +28,7 @@ SORT file.cday asc
 
 # All Published
 ```dataview
-TABLE file.mday, file.cday, file.tags
+TABLE file.mday, file.cday, file.tags, file.path
 FROM "public"
 WHERE !draft
 SORT file.mtime desc
