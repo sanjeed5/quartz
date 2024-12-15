@@ -9,7 +9,7 @@ Brain dumps. Morning pages. It's all the same idea.
 
 Sometimes, your brain is brimming with too many things. Too many thoughts, things to do, feelings, everything. 
 
-And in your mind, it can feel like a lot. Putting it on paper, shows you how much more manageable this it. 
+And in your mind, it can feel like a lot. Putting it on paper, shows you how much more manageable this is. 
 
 The steps are quite simple: 
 1. Take a pen and paper. 
@@ -24,7 +24,7 @@ If you prefer writing digitally, then:
 
 I've found that the timer just forces you to get started and not overthink this. 
 
-If you use Obsidian, you can also checkout [obsidian-perilous-writing plugin](https://github.com/sameersismail/obsidian-perilous-writing)
+If you use Obsidian, you can also check out [obsidian-perilous-writing plugin](https://github.com/sameersismail/obsidian-perilous-writing)
 
 More: 
 Articles on [brain dump](https://psychcentral.com/health/using-brain-dumping-to-manage-anxiety-and-over-thinking), [morning pages](https://www.masterclass.com/articles/tips-for-writing-morning-journal-pages). 

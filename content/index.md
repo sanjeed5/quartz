@@ -16,7 +16,7 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 
 ### ✨ me in 30 seconds
 
-- semi-technical generalist. loves to build - [DM](https://x.com/sanjeed_i) if you'd like to build something together
+- semi-technical generalist. loves to build - [DM](https://x.com/sanjeed_i) if you have an idea you want to build
 - currently product at [stylumia.ai](http://stylumia.ai) (Retail AI Startup)
 - prev. product at [juno.finance](https://juno.finance/) (US Fintech).
     - launched multiple features end to end which helped increase crypto revenue by 50%
@@ -36,9 +36,9 @@ I'm Sanjeed. This is my little hypertext garden on the internet - make yourself 
 
 See all here: [builds](./tags/builds) 
 
-### 📝 posts
+### 📝 write
 
-See [notes](./tags/notes), [TIL](./tags/TIL)
+See [notes](./notes), [TIL](./today-i-learned/)
 
 ### 💼 work
 
